@@ -17,7 +17,6 @@ RUN apk add --no-cache \
     && mv /tmp/openzwave /tmp/pyozwbuild/python-openzwave/ \
     && pip3 install --no-cache-dir python_openzwave==0.4.0.35 --upgrade --no-deps --force-reinstall --install-option="--flavor=dev" -b /tmp/pyozwbuild \
 
-#    && git clone --depth 1 --branch $BUILD_VERSION https://github.com/jvolkman/home-assistant homeassistant \
     && git clone --branch $BUILD_VERSION https://github.com/home-assistant/home-assistant homeassistant \
     && cd homeassistant \
     && git config user.email "you@example.com" \
